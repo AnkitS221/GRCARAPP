@@ -1,0 +1,53 @@
+<ion-content class="ion-padding" class="transparent-header">
+  <form #LoginForm="ngForm">
+    <div class="icon-cart">
+      <img src="assets/grCARapp_banner.png" style="width: 100%;">
+    </div>
+
+    <div *ngIf="UserError && status == 200">
+      <div class="alert alert-success" role="alert">
+        {{ UserError }}
+      </div>
+    </div>
+
+    <div *ngIf="UserError && status != 200">
+      <div class="alert alert-danger" role="alert">
+        {{ UserError }}
+      </div>
+    </div>
+
+    <!-- Registered User Login Form -->
+    <div class="row ion-padding">
+      <div class="col-md-4">
+        <h2 class="ion-text-center">Enter your credentials</h2>
+
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <span slot="end">Forgot Password?</span>
+        </ion-item>
+      </div>
+    </div>
+    <ion-button class="ion-padding" type="submit" expand="block" color="dark">
+      <ion-icon name="log-in-outline"></ion-icon> &nbsp; Login
+    </ion-button>
+    <div style="
+    margin-top: 10%;
+    margin-left: 47%;
+">OR</div>
+    <ion-button class="ion-padding" type="submit" expand="block" color="danger" (click)="onClick()">
+      <ion-icon name="logo-google"></ion-icon> &nbsp; Sign in with Google
+    </ion-button>
+    <ion-button class="ion-padding" type="submit" expand="block" color="vibrant">
+      <ion-icon name="mail-outline"></ion-icon>&nbsp; Sign in with Outlook
+    </ion-button>
+    <!-- Registered User Login Form End -->
+  </form>
+</ion-content>
