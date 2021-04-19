@@ -24,6 +24,14 @@ const routes: Routes = [
     path: 'purchase-orders',
     loadChildren: () => import('./pages/purchase-orders/purchase-orders.module').then( m => m.PurchaseOrdersPageModule)
   },
+  {
+    path: 'po-details-edit',
+    loadChildren: () => import('./pages/po-details-edit/po-details-edit.module').then( m => m.PoDetailsEditPageModule)
+  },
+  {
+    path: 'scan-details',
+    loadChildren: () => import('./pages/scan-details/scan-details.module').then( m => m.ScanDetailsPageModule)
+  },
 
 ];
 

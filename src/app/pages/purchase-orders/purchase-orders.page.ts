@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { FilterDetailsComponent } from './filter-details/filter-details.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-purchase-orders',
@@ -9,13 +10,14 @@ import { FilterDetailsComponent } from './filter-details/filter-details.componen
 })
 export class PurchaseOrdersPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  arr = Array<any>(6)
+  constructor(private modalCtrl: ModalController, private router: Router) { }
 
   ngOnInit() {
   }
 
   goToScan() {
-
+    this.router.navigate(['scan-details']);
   }
 
   async goToFilter() {
@@ -24,6 +26,10 @@ export class PurchaseOrdersPage implements OnInit {
       cssClass: 'my-custom-class'
     });
     return await modal.present();
+  }
+
+  goToEdit() {
+    this.router.navigate(['po-details-edit']);
   }
 
 }

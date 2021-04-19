@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Scan / Enter Details </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="assets/Raster-5.png" class="scanner-icon">
+  <br>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Document Number</ion-label>
+      <ion-input placeholder="Enter Document Number"></ion-input>
+      <ion-icon name="scan-outline" slot="end" (click)="openScanner()"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Article</ion-label>
+      <ion-input placeholder="Enter Article"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Vendor/Site</ion-label>
+      <ion-select interface="popover" placeholder="Select Vendor">
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="purple">Purple</ion-select-option>
+        <ion-select-option value="yellow">Yellow</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+<br><br>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="nextOption()" expand="block" color="loginbtn">
+          FIND
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
