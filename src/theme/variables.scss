@@ -79,6 +79,54 @@
   .ion-color-vibrant {
     --ion-color-base: #55acee;
   }
+
+  --ion-color-toolbar: #C0CCDA;
+  --ion-color-toolbar-rgb: 192,204,218;
+  --ion-color-toolbar-contrast: #000000;
+  --ion-color-toolbar-contrast-rgb: 0,0,0;
+  --ion-color-toolbar-shade: #a9b4c0;
+  --ion-color-toolbar-tint: #c6d1de;
+
+  .ion-color-toolbar {
+    --ion-color-base: var(--ion-color-toolbar);
+    --ion-color-base-rgb: var(--ion-color-toolbar-rgb);
+    --ion-color-contrast: var(--ion-color-toolbar-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-toolbar-contrast-rgb);
+    --ion-color-shade: var(--ion-color-toolbar-shade);
+    --ion-color-tint: var(--ion-color-toolbar-tint);
+  }
+
+    --ion-color-loginbtn: #47525E;
+    --ion-color-loginbtn-rgb: 71,82,94;
+    --ion-color-loginbtn-contrast: #ffffff;
+    --ion-color-loginbtn-contrast-rgb: 255,255,255;
+    --ion-color-loginbtn-shade: #3e4853;
+    --ion-color-loginbtn-tint: #59636e;
+  
+  .ion-color-loginbtn {
+    --ion-color-base: var(--ion-color-loginbtn);
+    --ion-color-base-rgb: var(--ion-color-loginbtn-rgb);
+    --ion-color-contrast: var(--ion-color-loginbtn-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-loginbtn-contrast-rgb);
+    --ion-color-shade: var(--ion-color-loginbtn-shade);
+    --ion-color-tint: var(--ion-color-loginbtn-tint);
+  }
+
+    --ion-color-logingoogle: #2A71BE;
+    --ion-color-logingoogle-rgb: 42,113,190;
+    --ion-color-logingoogle-contrast: #ffffff;
+    --ion-color-logingoogle-contrast-rgb: 255,255,255;
+    --ion-color-logingoogle-shade: #2563a7;
+    --ion-color-logingoogle-tint: #3f7fc5;
+
+    .ion-color-logingoogle {
+    --ion-color-base: var(--ion-color-logingoogle);
+    --ion-color-base-rgb: var(--ion-color-logingoogle-rgb);
+    --ion-color-contrast: var(--ion-color-logingoogle-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-logingoogle-contrast-rgb);
+    --ion-color-shade: var(--ion-color-logingoogle-shade);
+    --ion-color-tint: var(--ion-color-logingoogle-tint);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

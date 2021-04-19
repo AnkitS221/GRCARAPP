@@ -1,9 +1,11 @@
 <ion-content class="ion-padding" class="transparent-header">
   <form #LoginForm="ngForm">
     <div class="icon-cart">
-      <img src="assets/grCARapp_banner.png" style="width: 100%;">
+      <img src="assets/logo.png" style="width: 15%;">
+      <br>
+      <img src="assets/bLack_grcarapp.png" style="width: 80%;">
     </div>
-
+<br><br>
     <div *ngIf="UserError && status == 200">
       <div class="alert alert-success" role="alert">
         {{ UserError }}
@@ -19,35 +21,37 @@
     <!-- Registered User Login Form -->
     <div class="row ion-padding">
       <div class="col-md-4">
-        <h2 class="ion-text-center">Enter your credentials</h2>
-
         <ion-item>
-          <ion-label position="floating">Username</ion-label>
-          <ion-input></ion-input>
+          <ion-input placeholder="Username"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input></ion-input>
+          <ion-input placeholder="Password"></ion-input>
         </ion-item>
-
+<!-- 
         <ion-item>
           <span slot="end">Forgot Password?</span>
-        </ion-item>
+        </ion-item> -->
       </div>
     </div>
-    <ion-button class="ion-padding" type="submit" expand="block" color="dark">
-      <ion-icon name="log-in-outline"></ion-icon> &nbsp; Login
+    <ion-button class="ion-padding" type="submit" expand="block" color="loginbtn">
+      <!-- <ion-icon name="log-in-outline"></ion-icon> &nbsp; Log In -->
+      LOGIN
     </ion-button>
     <div style="
     margin-top: 10%;
     margin-left: 47%;
-">OR</div>
-    <ion-button class="ion-padding" type="submit" expand="block" color="danger" (click)="onClick()">
-      <ion-icon name="logo-google"></ion-icon> &nbsp; Sign in with Google
+">(OR)</div>
+    <ion-button class="ion-padding" type="submit" expand="block" color="logingoogle" (click)="onClick()">
+      <ion-icon name="logo-google"></ion-icon> &nbsp; LOGIN USING GOOGLE
     </ion-button>
-    <ion-button class="ion-padding" type="submit" expand="block" color="vibrant">
+    <!-- <ion-button class="ion-padding" type="submit" expand="block" color="vibrant">
       <ion-icon name="mail-outline"></ion-icon>&nbsp; Sign in with Outlook
-    </ion-button>
+    </ion-button> -->
     <!-- Registered User Login Form End -->
   </form>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-no-padding">Powered by GroupSoft US Inc</ion-row>
+  </ion-grid>
+</ion-footer>

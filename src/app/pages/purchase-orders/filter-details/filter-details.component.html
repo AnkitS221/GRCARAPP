@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="toolbar">
+    <ion-buttons slot="start">
+      <ion-button class="btn-icon btn-ion-icon" (click)="goToListing()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Filter </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToListing()" class="btn-icon">
+        SAVE
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Expected Delivery Date</ion-label>
+      <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Vendor</ion-label>
+      <ion-input placeholder="Enter Vendor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Document Type</ion-label>
+      <ion-input placeholder="Enter Document Type"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Processing State</ion-label>
+      <ion-input placeholder="Enter Processing State"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Supplier</ion-label>
+      <ion-select interface="popover" placeholder="Select Supplier">
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="purple">Purple</ion-select-option>
+        <ion-select-option value="yellow">Yellow</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Supplier Category</ion-label>
+      <ion-select interface="popover" placeholder="Select Category">
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="purple">Purple</ion-select-option>
+        <ion-select-option value="yellow">Yellow</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

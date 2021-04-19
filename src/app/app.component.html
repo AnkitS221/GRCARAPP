@@ -2,15 +2,70 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
+        <div class="options">
+          <ion-grid class="ion-no-padding">
+            <ion-row>
+              <ion-item lines="none">
+                <ion-avatar slot="start">
+                  <img src="assets/Raster_1.png">
+                </ion-avatar>
+                <ion-avatar slot="end">
+                  <img src="assets/Raster.png">
+                </ion-avatar>
+                <ion-label>
+                  <h2>Anand R.</h2>
+                  <p>Senior Developer</p>
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-grid>
+        </div>
         <ion-list id="inbox-list">
-          <ion-list-header>GroupSoft</ion-list-header>
-          <ion-note>ankit.singh@groupsoftus.com</ion-note>
-
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+          <!-- <ion-list-header>GroupSoft</ion-list-header>
+          <ion-note>ankit.singh@groupsoftus.com</ion-note> -->
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/shikha2']" lines="none" detail="false"
               routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>Merchandise 360</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/shikha1']" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-label>Store 360</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/shikha']" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-label>Retail Calendar</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <hr>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="forward" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
               <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <hr>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/shikha2']" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-label>Settings</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/shikha1']" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-label>Profile</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/shikha']" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-label>Logout</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>

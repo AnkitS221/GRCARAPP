@@ -20,7 +20,11 @@ const routes: Routes = [
   {
     path: 'merchandises',
     loadChildren: () => import('./pages/merchandises/merchandises.module').then( m => m.MerchandisesPageModule)
+  },  {
+    path: 'purchase-orders',
+    loadChildren: () => import('./pages/purchase-orders/purchase-orders.module').then( m => m.PurchaseOrdersPageModule)
   },
+
 ];
 
 @NgModule({

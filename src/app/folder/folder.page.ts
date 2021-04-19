@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as HighCharts from 'highcharts';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-folder',
@@ -10,9 +11,10 @@ import * as HighCharts from 'highcharts';
 export class FolderPage implements OnInit {
   public folder: string;
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute, private menuCtrl: MenuController) {}
 
   ngOnInit() {
+    this.menuCtrl.enable(true);
     this.barChartPopulation();
     this.pieChartBrowser();
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
