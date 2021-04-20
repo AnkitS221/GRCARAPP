@@ -1,11 +1,11 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button class="btn-icon btn-ion-icon" (click)="goToListing()">
         <ion-icon name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Filter </ion-title>
+    <ion-title>Filter</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="goToListing()" class="btn-icon">
         SAVE
@@ -16,41 +16,56 @@
 
 <ion-content>
   <ion-list>
-    <ion-item>
+    <ion-item lines="none">
       <ion-label position="stacked">Expected Delivery Date</ion-label>
       <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
     </ion-item>
-    <ion-item>
+    <ion-item lines="none">
       <ion-label position="stacked">Vendor</ion-label>
       <ion-input placeholder="Enter Vendor"></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item lines="none">
       <ion-label position="stacked">Document Type</ion-label>
       <ion-input placeholder="Enter Document Type"></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item lines="none">
       <ion-label position="stacked">Processing State</ion-label>
       <ion-input placeholder="Enter Processing State"></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item lines="none">
       <ion-label position="stacked">Supplier</ion-label>
       <ion-select interface="popover" placeholder="Select Supplier">
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="purple">Purple</ion-select-option>
-        <ion-select-option value="yellow">Yellow</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
+        <ion-select-option value="red">Supplier 1</ion-select-option>
+        <ion-select-option value="purple">ABC Supplier</ion-select-option>
+        <ion-select-option value="yellow">Supplier XYZ</ion-select-option>
+        <ion-select-option value="orange">Supplier RUN</ion-select-option>
+        <ion-select-option value="green">WASD123</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-item>
+    <ion-item lines="none">
       <ion-label position="stacked">Supplier Category</ion-label>
       <ion-select interface="popover" placeholder="Select Category">
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="purple">Purple</ion-select-option>
-        <ion-select-option value="yellow">Yellow</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
+        <ion-select-option value="red">Category 1</ion-select-option>
+        <ion-select-option value="purple">Category 2</ion-select-option>
+        <ion-select-option value="yellow">Category 3</ion-select-option>
+        <ion-select-option value="orange">Category 4</ion-select-option>
+        <ion-select-option value="green">Category 5</ion-select-option>
       </ion-select>
+    </ion-item>
+    <ion-item lines="none" class="pt-4">
+      <ion-label position="stacked">Receiving Mode</ion-label>
+      <ion-list lines="none">
+        <ion-radio-group value="LN">
+          <ion-item>
+            <ion-label>Line Receive</ion-label>
+            <ion-radio slot="start" value="LN"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Trusted</ion-label>
+            <ion-radio slot="start" value="TR"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
     </ion-item>
   </ion-list>
 

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -9,7 +9,7 @@
 
 <ion-content>
   <img src="assets/Raster-5.png" class="scanner-icon">
-  <br>
+  <br><br>
   <ion-list>
     <ion-item>
       <ion-label position="stacked">Document Number</ion-label>
@@ -29,14 +29,15 @@
       </ion-select>
     </ion-item>
   </ion-list>
-<br><br>
-  <ion-grid>
-    <ion-row class="ion-align-items-center">
-      <ion-col size="12" class="ion-text-center">
-        <ion-button (click)="nextOption()" expand="block" color="loginbtn">
-          FIND
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button>
+          <ion-label>FIND</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+</ion-toolbar>
+</ion-footer>

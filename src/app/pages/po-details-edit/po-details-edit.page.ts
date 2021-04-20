@@ -17,9 +17,13 @@ export class PoDetailsEditPage implements OnInit {
     // btnCellRenderer: BtnCellRendererComponent,
   }
   rowData = [
-    { make: 'Toyota', model: 100, price: 0, bal: 200 },
-    { make: 'Ford', model: 200, price: 0, bal: 500 },
-    { make: 'Porsche', model: 300, price: 0, bal: 800 }
+    { make: 'G425 Max Driver', model: 100, price: 0, bal: 200 },
+    { make: 'SIM2 Driver', model: 200, price: 0, bal: 500 },
+    { make: 'Epic Speed Driver', model: 300, price: 0, bal: 800 },
+    { make: 'KING RADSPEED Driver', model: 300, price: 0, bal: 800 },
+    { make: 'G410 4-PW Black Dot Iron Set', model: 300, price: 0, bal: 800 },
+    { make: 'SIM Max Iron Set w/ Steel', model: 300, price: 0, bal: 800 },
+    { make: 'MAVRIK Max Iron Set w/ Steel Shafts', model: 300, price: 0, bal: 800 },
   ];
   defaultColDef;
   constructor(private location: Location, private router: Router) { }
@@ -37,7 +41,7 @@ export class PoDetailsEditPage implements OnInit {
       width: 100,
     };
     this.columnDefs = [
-      { headerName: 'Article Description', field: 'make' },
+      { headerName: 'Article Description', field: 'make', width: 250 },
       { headerName: 'Shipped', field: 'model' },
       { headerName: 'Balance', field: 'bal' },
       { headerName: 'Received', field: 'price', editable: true },

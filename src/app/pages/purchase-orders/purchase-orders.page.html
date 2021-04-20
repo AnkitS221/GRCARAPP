@@ -12,40 +12,49 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Purchase Orders</ion-title>
-    </ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-button (click)="goToFilter()">
-        <ion-icon slot="icon-only" name="filter-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-header>
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">Purchase Orders</ion-title>
+  </ion-toolbar>
+  <ion-buttons slot="end">
+    <ion-button (click)="goToFilter()">
+      <ion-icon slot="icon-only" name="filter-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
   <ion-toolbar>
     <ion-searchbar placeholder="Search PO/ASN/DEL/GTN" showCancelButton="focus"></ion-searchbar>
   </ion-toolbar>
- <ion-item *ngFor="let x of arr" (click)="goToEdit(x.purchase_type)" lines="none">
-    <ion-label>
-      <h3>{{x.purchase_id}}</h3>
-      <p>{{x.subtext}}</p>
-    </ion-label>
-    <ion-note slot="end" color="dark">{{x.purchase_type}}</ion-note>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let x of arr" (click)="goToEdit(x.purchase_type)" lines="none" class="ion-padding">
+    <ion-item>
+      <h5><b>{{x.purchase_id}}</b></h5>
+      <ion-button *ngIf="x.purchase_type=='LN'" fill="outline" slot="end" color="secondary">{{x.purchase_type_desc}}</ion-button>
+      <ion-button *ngIf="x.purchase_type=='TR'" fill="outline" slot="end" color="success">{{x.purchase_type_desc}}</ion-button>
     </ion-item>
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule">
-        <ion-icon name="calendar"></ion-icon>
-        <ion-label>Open</ion-label>
-      </ion-tab-button>
-      <ion-tab-button (click)="goToScan()">
-        <ion-icon name="add-circle-outline" style="font-size: 15vw;"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="map">
-        <ion-icon name="map"></ion-icon>
-        <ion-label>Posted</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+    <ion-card-content>
+      <h3>{{x.subtext}}</h3>
+      <p>Shipping Date : {{x.shipping_date}}</p>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule">
+          <ion-icon name="bag"></ion-icon>
+          <ion-label>Open</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="goToScan()">
+          <ion-icon name="add-circle" style="font-size: 15vw;"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="map">
+          <ion-icon name="bag-check"></ion-icon>
+          <ion-label>Posted</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

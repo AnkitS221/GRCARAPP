@@ -13,19 +13,117 @@ export class PurchaseOrdersPage implements OnInit {
   arr = [{
     purchase_id: 'PO123456778',
     subtext: '7 articles',
-    purchase_type: 'LN'
+    purchase_type: 'LN',
+    shipping_date: '22/2/2021',
+    purchase_type_desc: 'Line Receive',
   }, {
     purchase_id: 'PO123456779',
     subtext: '7 articles',
-    purchase_type: 'TR'
+    purchase_type: 'TR',
+    shipping_date: '27/4/2021',
+    purchase_type_desc: 'Trusted',
   }, {
     purchase_id: 'PO123456780',
     subtext: 'Handling Units - 2',
-    purchase_type: 'LN'
+    purchase_type: 'LN',
+    shipping_date: '22/6/2021',
+    purchase_type_desc: 'Line Receive',
   }, {
     purchase_id: 'PO123456781',
     subtext: 'Handling Units - 2',
-    purchase_type: 'TR'
+    purchase_type: 'LN',
+    shipping_date: '13/8/2021',
+    purchase_type_desc: 'Line Receive',
+  },
+  {
+    purchase_id: 'PO123456782',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+    shipping_date: '13/8/2021'
+  },
+  {
+    purchase_id: 'PO123456783',
+    subtext: 'Handling Units - 6',
+    purchase_type: 'LN',
+    purchase_type_desc: 'Line Receive',
+    shipping_date: '13/8/2021'
+  },
+  {
+    purchase_id: 'PO123456784',
+    subtext: '77 articles',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+    shipping_date: '13/8/2021'
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+    shipping_date: '13/8/2021'
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted'
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+    shipping_date: '14/5/2021'
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+    shipping_date: '13/8/2021'
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+    shipping_date: '13/8/2021'
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+    shipping_date: '13/8/2021'
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    shipping_date: '13/8/2021',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    shipping_date: '13/8/2021',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    shipping_date: '13/8/2021',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted',
+  },
+  {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    shipping_date: '13/8/2021',
+    purchase_type: 'TR',
+    purchase_type_desc: 'Trusted'
   }];
 
   constructor(private modalCtrl: ModalController, private router: Router) { }
