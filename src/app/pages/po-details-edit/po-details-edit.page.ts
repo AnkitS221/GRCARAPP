@@ -13,6 +13,9 @@ export class PoDetailsEditPage implements OnInit {
   title = 'app';
   navigation: any;
   columnDefs = [];
+  private gridApi;
+  private getRowNodeId;
+  private gridColumnApi;
   frameworkComponents: {
     // btnCellRenderer: BtnCellRendererComponent,
   }
@@ -26,6 +29,7 @@ export class PoDetailsEditPage implements OnInit {
     { make: 'MAVRIK Max Iron Set w/ Steel Shafts', model: 300, price: 0, bal: 800 },
   ];
   defaultColDef;
+  
   constructor(private location: Location, private router: Router) { }
 
   ngOnInit() {
@@ -49,6 +53,10 @@ export class PoDetailsEditPage implements OnInit {
 
     ];
     this.frameworkComponents = { buttonRenderer: BtnCellRendererComponent }; // Ag-grid
+
+    this.getRowNodeId = function (data) {
+      return data.make;
+    };
   }
 
   public onAggridAction(e) {
@@ -64,6 +72,21 @@ export class PoDetailsEditPage implements OnInit {
 
   goBack() {
     this.location.back();
+  }
+
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridColumnApi = params.columnApi;
+  }
+
+  onGridClicked(data: any) {
+    if(data.colDef.headerName === 'Scan') {
+      var rowNode = this.gridApi.getRowNode(data.data.make);
+      var newPrice = Math.floor(Math.random() * 1000);
+      setTimeout(() => {
+        rowNode.setDataValue('price', newPrice);
+      }, 4000)
+    }
   }
 
 }
