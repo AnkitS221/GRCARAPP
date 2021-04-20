@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Purchase Orders</ion-title>
+    <ion-title color="primary">Purchase Orders</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="goToFilter()">
         <ion-icon slot="icon-only" name="filter-outline"></ion-icon>
@@ -14,7 +14,7 @@
 
 <ion-header collapse="condense">
   <ion-toolbar>
-    <ion-title size="large">Purchase Orders</ion-title>
+    <ion-title size="large" color="primary">Purchase Orders</ion-title>
   </ion-toolbar>
   <ion-buttons slot="end">
     <ion-button (click)="goToFilter()">
@@ -29,8 +29,8 @@
   <ion-card *ngFor="let x of arr" (click)="goToEdit(x.purchase_type)" lines="none" class="ion-padding">
     <ion-item>
       <h5><b>{{x.purchase_id}}</b></h5>
-      <ion-button *ngIf="x.purchase_type=='LN'" fill="outline" slot="end" color="secondary">{{x.purchase_type_desc}}</ion-button>
-      <ion-button *ngIf="x.purchase_type=='TR'" fill="outline" slot="end" color="success">{{x.purchase_type_desc}}</ion-button>
+      <ion-button *ngIf="x.purchase_type=='LN'" fill="outline" slot="end" color="warning">{{x.purchase_type_desc}}</ion-button>
+      <ion-button *ngIf="x.purchase_type=='TR'" fill="outline" slot="end" color="tertiary">{{x.purchase_type_desc}}</ion-button>
     </ion-item>
     <ion-card-content>
       <h3>{{x.subtext}}</h3>

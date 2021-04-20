@@ -12,7 +12,7 @@ import { ScanDetailsPage } from './scan-details.page';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule.forRoot(),
     ScanDetailsPageRoutingModule
   ],
   declarations: [ScanDetailsPage]
