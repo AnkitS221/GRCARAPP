@@ -1,14 +1,14 @@
-ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #d6d6d6));
-}
+// ion-menu ion-content {
+//   --background: var(--ion-item-background, var(--ion-background-color, #d6d6d6));
+// }
 
-ion-menu ion-item {
-  --background: #d6d6d6 !important;
-}
+// ion-menu ion-item {
+//   --background: #d6d6d6 !important;
+// }
 
-ion-menu ion-list {
-  background-color: #d6d6d6 !important;
-}
+// ion-menu ion-list {
+//   background-color: #d6d6d6 !important;
+// }
 
 ion-menu.md ion-content {
   --padding-start: 8px;
@@ -71,12 +71,12 @@ ion-menu.md ion-item ion-icon {
 
 ion-menu.md ion-item ion-label {
   font-weight: 500;
-  letter-spacing: 2px !important;
+  letter-spacing: 1px !important;
 }
 
 ion-menu.ios ion-item ion-label {
   font-weight: 500;
-  letter-spacing: 1.5px !important;
+  letter-spacing: 1px !important;
 }
 
 
