@@ -10,26 +10,26 @@
   --ion-color-primary-shade: #1c5284;
   --ion-color-primary-tint: #366da1;
 
-  --ion-color-secondary: #96cbfd;
-  --ion-color-secondary-rgb: 150,203,253;
+  --ion-color-secondary: #c5bfbf;
+  --ion-color-secondary-rgb: 197,191,191;
   --ion-color-secondary-contrast: #000000;
   --ion-color-secondary-contrast-rgb: 0,0,0;
-  --ion-color-secondary-shade: #84b3df;
-  --ion-color-secondary-tint: #a1d0fd;
+  --ion-color-secondary-shade: #ada8a8;
+  --ion-color-secondary-tint: #cbc5c5;
 
-  --ion-color-tertiary: #b0b0b0;
-  --ion-color-tertiary-rgb: 176,176,176;
+  --ion-color-tertiary: #a4dab8;
+  --ion-color-tertiary-rgb: 164,218,184;
   --ion-color-tertiary-contrast: #000000;
   --ion-color-tertiary-contrast-rgb: 0,0,0;
-  --ion-color-tertiary-shade: #9b9b9b;
-  --ion-color-tertiary-tint: #b8b8b8;
+  --ion-color-tertiary-shade: #90c0a2;
+  --ion-color-tertiary-tint: #addebf;
 
-  --ion-color-success: #72d599;
-  --ion-color-success-rgb: 114,213,153;
+  --ion-color-success: #47d780;
+  --ion-color-success-rgb: 71,215,128;
   --ion-color-success-contrast: #000000;
   --ion-color-success-contrast-rgb: 0,0,0;
-  --ion-color-success-shade: #64bb87;
-  --ion-color-success-tint: #80d9a3;
+  --ion-color-success-shade: #3ebd71;
+  --ion-color-success-tint: #59db8d;
 
   --ion-color-warning: #ffc409;
   --ion-color-warning-rgb: 255,196,9;
@@ -38,12 +38,12 @@
   --ion-color-warning-shade: #e0ac08;
   --ion-color-warning-tint: #ffca22;
 
-  --ion-color-danger: #df6d7c;
-  --ion-color-danger-rgb: 223,109,124;
+  --ion-color-danger: #e36475;
+  --ion-color-danger-rgb: 227,100,117;
   --ion-color-danger-contrast: #000000;
   --ion-color-danger-contrast-rgb: 0,0,0;
-  --ion-color-danger-shade: #c4606d;
-  --ion-color-danger-tint: #e27c89;
+  --ion-color-danger-shade: #c85867;
+  --ion-color-danger-tint: #e67483;
 
   --ion-color-dark: #222428;
   --ion-color-dark-rgb: 34,36,40;
@@ -65,7 +65,6 @@
   --ion-color-light-contrast-rgb: 0,0,0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
-
   /** login **/
   .ion-color-vibrant {
     --ion-color-base: #55acee;
@@ -87,7 +86,7 @@
     --ion-color-tint: var(--ion-color-toolbar-tint);
   }
 
-    --ion-color-loginbtn: #4b4b4b;
+    --ion-color-loginbtn: #5cb37d;
     --ion-color-loginbtn-rgb: 71,82,94;
     --ion-color-loginbtn-contrast: #ffffff;
     --ion-color-loginbtn-contrast-rgb: 255,255,255;

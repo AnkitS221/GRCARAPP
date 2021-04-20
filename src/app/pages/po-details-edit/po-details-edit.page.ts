@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class PoDetailsEditPage implements OnInit {
 
   title = 'app';
-
+  navigation: any;
   columnDefs = [];
   frameworkComponents: {
     // btnCellRenderer: BtnCellRendererComponent,
@@ -29,23 +29,23 @@ export class PoDetailsEditPage implements OnInit {
   constructor(private location: Location, private router: Router) { }
 
   ngOnInit() {
-    const navigation = this.router.getCurrentNavigation();
-    if(navigation.extras.state.transd === 'TR') {
+    this.navigation = this.router.getCurrentNavigation();
+    if (this.navigation.extras.state.transd === 'TR') {
       this.rowData = [
-        { make: 'Toyota', model: 100, price: 200, bal: 200 },
-        { make: 'Ford', model: 200, price: 500, bal: 500 },
-        { make: 'Porsche', model: 300, price: 800, bal: 800 }
+        { make: 'G425 Max Driver', model: 100, price: 200, bal: 200 },
+        { make: 'SIM2 Driver', model: 200, price: 450, bal: 500 },
+        { make: 'Epic Speed Driver', model: 300, price: 790, bal: 800 }
       ];
     }
     this.defaultColDef = {
       width: 100,
     };
     this.columnDefs = [
-      { headerName: 'Article Description', field: 'make', width: 250 },
+      { headerName: 'Article Description', field: 'make', width: 200 },
+      { headerName: 'Received', field: 'price', editable: true },
+      { headerName: "Scan", maxWidth: 130, cellRenderer: 'buttonRenderer', cellRendererParams: { onClick: this.onAggridAction.bind(this) } },
       { headerName: 'Shipped', field: 'model' },
       { headerName: 'Balance', field: 'bal' },
-      { headerName: 'Received', field: 'price', editable: true },
-      { headerName: "Scan", maxWidth: 130, cellRenderer: 'buttonRenderer', cellRendererParams: { onClick: this.onAggridAction.bind(this) } }
 
     ];
     this.frameworkComponents = { buttonRenderer: BtnCellRendererComponent }; // Ag-grid
