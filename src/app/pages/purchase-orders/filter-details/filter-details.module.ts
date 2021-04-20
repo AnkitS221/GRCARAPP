@@ -13,6 +13,6 @@ import { FilterDetailsComponent } from './filter-details.component';
     FormsModule,
     IonicModule
   ],
-  declarations: [FilterDetailsComponent]
+  declarations: []
 })
 export class FilterPageModule {}

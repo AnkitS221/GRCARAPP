@@ -44,7 +44,7 @@ export class PoDetailsEditPage implements OnInit {
       { headerName: 'Article Description', field: 'make', width: 250 },
       { headerName: 'Shipped', field: 'model' },
       { headerName: 'Balance', field: 'bal' },
-      { headerName: 'Received', field: 'price', editable: true },
+      { headerName: 'Received', field: 'price', editable: true, singleClickEdit: true },
       { headerName: "Scan", maxWidth: 130, cellRenderer: 'buttonRenderer', cellRendererParams: { onClick: this.onAggridAction.bind(this) } }
 
     ];
