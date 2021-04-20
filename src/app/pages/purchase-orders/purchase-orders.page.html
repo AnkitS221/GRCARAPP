@@ -26,12 +26,13 @@
   <ion-toolbar>
     <ion-searchbar placeholder="Search PO/ASN/DEL/GTN" showCancelButton="focus"></ion-searchbar>
   </ion-toolbar>
-  <ion-item *ngFor="let x of arr" (click)="goToEdit()" lines="none">
+ <ion-item *ngFor="let x of arr" (click)="goToEdit(x.purchase_type)" lines="none">
     <ion-label>
-      <h3>PO123456778</h3>
-      <p>7 articles</p>
+      <h3>{{x.purchase_id}}</h3>
+      <p>{{x.subtext}}</p>
     </ion-label>
-  </ion-item>
+    <ion-note slot="end" color="dark">{{x.purchase_type}}</ion-note>
+    </ion-item>
   <ion-tabs>
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="schedule">

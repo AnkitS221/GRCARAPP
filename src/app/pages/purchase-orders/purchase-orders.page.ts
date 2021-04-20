@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { FilterDetailsComponent } from './filter-details/filter-details.component';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-purchase-orders',
@@ -10,7 +10,24 @@ import { Router } from '@angular/router';
 })
 export class PurchaseOrdersPage implements OnInit {
 
-  arr = Array<any>(16)
+  arr = [{
+    purchase_id: 'PO123456778',
+    subtext: '7 articles',
+    purchase_type: 'LN'
+  }, {
+    purchase_id: 'PO123456779',
+    subtext: '7 articles',
+    purchase_type: 'TR'
+  }, {
+    purchase_id: 'PO123456780',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'LN'
+  }, {
+    purchase_id: 'PO123456781',
+    subtext: 'Handling Units - 2',
+    purchase_type: 'TR'
+  }];
+
   constructor(private modalCtrl: ModalController, private router: Router) { }
 
   ngOnInit() {
@@ -28,8 +45,13 @@ export class PurchaseOrdersPage implements OnInit {
     return await modal.present();
   }
 
-  goToEdit() {
-    this.router.navigate(['po-details-edit']);
+  goToEdit(type: string) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        transd: type,
+      }
+    };
+    this.router.navigate(['po-details-edit'], navigationExtras);
   }
 
 }
