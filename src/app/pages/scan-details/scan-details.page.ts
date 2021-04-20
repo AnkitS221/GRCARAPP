@@ -27,4 +27,8 @@ export class ScanDetailsPage implements OnInit {
     });
   }
 
+  nextOption() {
+    this.router.navigate(['po-details-edit']);
+  }
+
 }
