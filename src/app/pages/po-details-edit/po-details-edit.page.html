@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -12,74 +12,51 @@
   <ion-card>
     <ion-grid>
       <ion-row>
-        <ion-col size="6">
-          Purchase Order
+        <ion-col>
+          <ion-label position="stacked"><b>Purchase Order</b></ion-label>
+          <p>PO123456778</p>
         </ion-col>
-        <ion-col offset="1" size="5">
-          PO123456778
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">
-          Vendor/DC
-        </ion-col>
-        <ion-col offset="1" size="5">
-          ABC Company
+        <ion-col>
+          <ion-label position="stacked"><b>Vendor/DC</b></ion-label>
+          <p>ABC Company</p>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="6">
-          Store
+        <ion-col>
+          <ion-label position="stacked"><b>Receiving No</b></ion-label>
+          <p>124324</p>
         </ion-col>
-        <ion-col offset="1" size="5">
-          S-304
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">
-          Store Description
-        </ion-col>
-        <ion-col offset="1" size="5">
-          Soho NY
+        <ion-col>
+          <ion-label position="stacked"><b>Received Date</b></ion-label>
+          <p>20th January 2021</p>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="6">
-          Receving No
+        <ion-col>
+          <ion-label><b>Store Details</b></ion-label>
+          <p>S420 - Soho NY - New York, USA</p>
         </ion-col>
-        <ion-col offset="1" size="5">
-          29424
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">
-          Received Date
-        </ion-col>
-        <ion-col offset="1" size="5">
-          20th January 2021
+        <ion-col class="d-flex flex-column-reverse align-items-end">
+          <ion-icon name="cube-outline" style="font-size: 60px;"></ion-icon>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card>
-<br>
-  <ag-grid-angular
-  style="width: 100%; height: 100%;padding: 3vw;"
-	class="ag-theme-balham"
-	[rowData]="rowData"
-  [columnDefs]="columnDefs"
-  [frameworkComponents]="frameworkComponents"
-  [defaultColDef]="defaultColDef">
-</ag-grid-angular>
+  <ag-grid-angular style="width: 100%; height: 100%;padding: 3vw;" class="ag-theme-balham" [rowData]="rowData" [rowHeight]="40"
+    [columnDefs]="columnDefs" [frameworkComponents]="frameworkComponents" [defaultColDef]="defaultColDef">
+  </ag-grid-angular>
 </ion-content>
 <ion-footer>
-  <ion-grid>
-    <ion-row>
-      <ion-col offset="2">
-        <ion-button size="default" color="medium" (click)="goBack()">SAVE</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button size="default" color="dark" (click)="goBack()">POST</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule">
+          <ion-label>SAVE</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="map">
+          <ion-label>POST</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
 </ion-footer>
