@@ -12,7 +12,7 @@ import { FolderPage } from './folder.page';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule.forRoot(),
     FolderPageRoutingModule
   ],
   declarations: [FolderPage]

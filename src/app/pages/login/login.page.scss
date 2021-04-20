@@ -7,7 +7,22 @@
     }
 }
 
+ion-input {
+  border-radius: 7px !important;
+  --background: rgb(219,219,219) !important;
+  --padding-start: 20px !important;
+}
+
+ion-item {
+  --background: #205d96 !important;
+}
+
 ion-footer {
-    margin-left: 17%;
-    margin-bottom: 3%;
+  background-color: #205d96 !important;
+  margin-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+ion-content {
+  --background: #205d96 !important;
 }

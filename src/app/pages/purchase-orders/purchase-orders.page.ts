@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class PurchaseOrdersPage implements OnInit {
 
-  arr = Array<any>(6)
+  arr = Array<any>(16)
   constructor(private modalCtrl: ModalController, private router: Router) { }
 
   ngOnInit() {

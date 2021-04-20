@@ -3,55 +3,58 @@
     <div class="icon-cart">
       <img src="assets/logo.png" style="width: 15%;">
       <br>
-      <img src="assets/bLack_grcarapp.png" style="width: 80%;">
+      <img src="assets/new_logo.png" style="width: 80%;">
     </div>
-<br><br>
-    <div *ngIf="UserError && status == 200">
-      <div class="alert alert-success" role="alert">
-        {{ UserError }}
-      </div>
+    <br><br>
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item lines="none">
+              <ion-input placeholder="Username" expand="block" class="login-input"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item lines="none">
+              <ion-input placeholder="Password" expand="block" class="login-input"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row  class="ion-padding-top ion-padding-horizontal">
+          <ion-col>
+            <ion-button expand="block" color="loginbtn" (click)="onClick()">
+              LOGIN
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-center">
+              <ion-text color="medium">(OR)</ion-text>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-padding-horizontal">
+          <ion-col>
+            <ion-button expand="block" color="logingoogle" (click)="onClick()">
+              <ion-icon name="logo-google"></ion-icon> &nbsp; LOGIN USING GOOGLE
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </div>
-
-    <div *ngIf="UserError && status != 200">
-      <div class="alert alert-danger" role="alert">
-        {{ UserError }}
-      </div>
-    </div>
-
-    <!-- Registered User Login Form -->
-    <div class="row ion-padding">
-      <div class="col-md-4">
-        <ion-item>
-          <ion-input placeholder="Username"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input placeholder="Password"></ion-input>
-        </ion-item>
-<!-- 
-        <ion-item>
-          <span slot="end">Forgot Password?</span>
-        </ion-item> -->
-      </div>
-    </div>
-    <ion-button class="ion-padding" type="submit" expand="block" color="loginbtn">
-      <!-- <ion-icon name="log-in-outline"></ion-icon> &nbsp; Log In -->
-      LOGIN
-    </ion-button>
-    <div style="
-    margin-top: 10%;
-    margin-left: 47%;
-">(OR)</div>
-    <ion-button class="ion-padding" type="submit" expand="block" color="logingoogle" (click)="onClick()">
-      <ion-icon name="logo-google"></ion-icon> &nbsp; LOGIN USING GOOGLE
-    </ion-button>
-    <!-- <ion-button class="ion-padding" type="submit" expand="block" color="vibrant">
-      <ion-icon name="mail-outline"></ion-icon>&nbsp; Sign in with Outlook
-    </ion-button> -->
-    <!-- Registered User Login Form End -->
   </form>
 </ion-content>
 <ion-footer class="ion-no-border">
   <ion-grid>
-    <ion-row class="ion-align-items-center ion-no-padding">Powered by GroupSoft US Inc</ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-text color="medium">Powered by GroupSoft US Inc</ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-footer>

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="toolbar">
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -62,10 +62,10 @@
     </ion-grid>
   </ion-card>
 <br>
-  <ag-grid-angular 
-  style="width: 100%; height: 100%;padding: 3vw;" 
+  <ag-grid-angular
+  style="width: 100%; height: 100%;padding: 3vw;"
 	class="ag-theme-balham"
-	[rowData]="rowData" 
+	[rowData]="rowData"
   [columnDefs]="columnDefs"
   [frameworkComponents]="frameworkComponents"
   [defaultColDef]="defaultColDef">
@@ -78,7 +78,7 @@
         <ion-button size="default" color="medium" (click)="goBack()">SAVE</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button size="default" color="dark" (click)="goBack()">POST</ion-button>  
+        <ion-button size="default" color="dark" (click)="goBack()">POST</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
