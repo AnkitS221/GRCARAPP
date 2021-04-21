@@ -16,7 +16,7 @@ $RECYCLE.BIN/
 *.log
 log.txt
 npm-debug.log*
-
+hosting.d*
 /.idea
 /.ionic
 /.sass-cache

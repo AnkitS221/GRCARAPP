@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-scan-details',
@@ -20,7 +20,12 @@ export class ScanDetailsPage implements OnInit {
     this.barcodeScanner.scan().then(barcodeData => {
       console.log('Barcode data', barcodeData);
       if (barcodeData) {
-        this.router.navigate(['po-details-edit']);
+        const navigationExtras: NavigationExtras = {
+          state: {
+            transd: 'TR',
+          }
+        };
+        this.router.navigate(['po-details-edit'], navigationExtras);
       }
     }).catch(err => {
       console.log('Error', err);
@@ -28,7 +33,12 @@ export class ScanDetailsPage implements OnInit {
   }
 
   nextOption() {
-    this.router.navigate(['po-details-edit']);
+    const navigationExtras: NavigationExtras = {
+      state: {
+        transd: 'TR',
+      }
+    };
+    this.router.navigate(['po-details-edit'], navigationExtras);
   }
 
 }

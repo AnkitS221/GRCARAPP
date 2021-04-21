@@ -14,7 +14,7 @@ export class PoDetailsEditPage implements OnInit {
   navigation: any;
   columnDefs = [];
   private gridApi;
-  private getRowNodeId;
+  public getRowNodeId;
   private gridColumnApi;
   frameworkComponents: {
     // btnCellRenderer: BtnCellRendererComponent,

@@ -126,9 +126,11 @@ export class PurchaseOrdersPage implements OnInit {
     purchase_type_desc: 'Trusted'
   }];
 
+  originalArr = [];
   constructor(private modalCtrl: ModalController, private router: Router) { }
 
   ngOnInit() {
+    this.originalArr = this.arr;
   }
 
   goToScan() {
@@ -150,6 +152,22 @@ export class PurchaseOrdersPage implements OnInit {
       }
     };
     this.router.navigate(['po-details-edit'], navigationExtras);
+  }
+
+  async filterList(evt) {
+    const searchTerm = evt.srcElement.value;
+  if(searchTerm === '') {
+    this.arr = this.originalArr
+  }
+    if (!searchTerm) {
+      return;
+    }
+  
+    this.arr = this.arr.filter(currentOrder => {
+      if (currentOrder.purchase_id && searchTerm) {
+        return (currentOrder.purchase_id.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+      }
+    });
   }
 
 }

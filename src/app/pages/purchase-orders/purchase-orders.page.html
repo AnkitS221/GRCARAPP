@@ -11,7 +11,7 @@
     </ion-buttons>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar placeholder="Search PO/ASN/DEL/GTN" showCancelButton="focus"></ion-searchbar>
+    <ion-searchbar placeholder="Search PO/ASN/DEL/GTN" showCancelButton="focus" (ionInput)="filterList($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 <ion-content>
