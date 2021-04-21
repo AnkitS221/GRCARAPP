@@ -7,29 +7,146 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large" color="primary">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <div class="ion-padding">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Bar Chart - Population </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <div id="barChart" style="width: 100%; height: 100%;"></div>
-      </ion-card-content>
-    </ion-card>
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large" color="primary">{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8">
+            <ion-text>
+              <ion-card-subtitle>YTD</ion-card-subtitle>
+              <h3>Sales Revenue</h3>
+            </ion-text>
+          </ion-col>
+          <ion-col class="d-flex flex-row-reverse">
+            <ion-icon name="stats-chart-outline" style="font-size: 50px;" color="dark"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text><b>Markdown</b></ion-text><br>
+            <ion-text>2345.22 $</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text><b>Promotion</b></ion-text><br>
+            <ion-text>4564.22 $</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text><b>Full Value</b></ion-text><br>
+            <ion-text>5564.22 $ </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Pie Chart - Browser market</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <div id="pieChart" style="width:100%; height:100%;"></div>
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8">
+            <ion-text>
+              <ion-card-subtitle>YTD</ion-card-subtitle>
+              <h3>Sales by Category</h3>
+            </ion-text>
+          </ion-col>
+          <ion-col class="d-flex flex-row-reverse">
+            <ion-icon name="pie-chart-outline" style="font-size: 50px;" color="tertiary"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text><b>Drivers</b></ion-text><br>
+            <ion-text>2345.22 $</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text><b>Putters</b></ion-text><br>
+            <ion-text>4545.22 $</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text><b>Iron Sets</b></ion-text><br>
+            <ion-text>145.22 $</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8">
+            <ion-text>
+              <ion-card-subtitle>YTD</ion-card-subtitle>
+              <h3>Footfall Rate</h3>
+            </ion-text>
+          </ion-col>
+          <ion-col class="d-flex flex-row-reverse">
+            <ion-icon name="footsteps-outline" style="font-size: 50px;" color="warning"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text><b>Men</b></ion-text><br>
+            <ion-text>70 %</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text><b>Women</b></ion-text><br>
+            <ion-text>30 %</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8">
+            <ion-text>
+              <ion-card-subtitle>YTD</ion-card-subtitle>
+              <h3>Purchase Orders</h3>
+            </ion-text>
+          </ion-col>
+          <ion-col class="d-flex flex-row-reverse">
+            <ion-icon name="cube-outline" style="font-size: 50px;" color="secondary"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text><b>Received</b></ion-text><br>
+            <ion-text>667</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text><b>Open</b></ion-text><br>
+            <ion-text>345</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

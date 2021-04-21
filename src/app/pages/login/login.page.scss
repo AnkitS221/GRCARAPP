@@ -14,15 +14,15 @@ ion-input {
 }
 
 ion-item {
-  --background: #d6d6d6 !important;
+  --background: var(--ion-login-bg-color);
 }
 
 ion-footer {
-  background-color: #d6d6d6 !important;
+  background-color: var(--ion-login-bg-color) !important;
   margin-left: 0px !important;
   margin-bottom: 0px !important;
 }
 
 ion-content {
-  --background: #d6d6d6 !important;
+  --background: var(--ion-login-bg-color) !important;
 }

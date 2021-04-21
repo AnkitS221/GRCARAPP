@@ -10,66 +10,55 @@ import { MenuController } from '@ionic/angular';
 })
 export class FolderPage implements OnInit {
   public folder: string;
-
-  constructor(private activatedRoute: ActivatedRoute, private menuCtrl: MenuController) {}
+  title = 'Company Hiring Report';
+  type = 'ColumnChart';
+  data = [
+     ["2014", 200],
+     ["2015", 560],
+     ["2016", 280],
+     ["2017", 300],
+     ["2018", 600]
+  ];
+  columnNames = ['Year', 'India'];
+  options = {};
+  width = 600;
+  height = 400;
+  constructor(private activatedRoute: ActivatedRoute, private menuCtrl: MenuController) { }
 
   ngOnInit() {
     this.menuCtrl.enable(true);
-    this.barChartPopulation();
-    this.pieChartBrowser();
+    // this.barChartPopulation();
+    // this.pieChartBrowser();
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
   barChartPopulation() {
-    HighCharts.chart('barChart', {
+    let myChart = HighCharts.chart('barChart', {
       chart: {
-        type: 'bar',
+        type: 'bar'
       },
       title: {
-        text: 'Historic World Population by Region',
+        text: 'Fruit Consumption'
       },
       xAxis: {
-        categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+        categories: ['Apples', 'Bananas', 'Oranges']
       },
       yAxis: {
-        min: 0,
         title: {
-          text: 'Population (millions)',
-          align: 'high',
-        },
-      },
-      tooltip: {
-        valueSuffix: ' millions',
-      },
-      plotOptions: {
-        bar: {
-          dataLabels: {
-            enabled: true,
-          },
-        },
+          text: 'Fruit eaten'
+        }
       },
       series: [
         {
+          name: 'Jane',
           type: undefined,
-          name: 'Year 1800',
-          data: [107, 31, 635, 203, 2],
+          data: [1, 0, 4]
         },
         {
+          name: 'John',
           type: undefined,
-          name: 'Year 1900',
-          data: [133, 156, 947, 408, 6],
-        },
-        {
-          type: undefined,
-          name: 'Year 2000',
-          data: [814, 841, 3714, 727, 31],
-        },
-        {
-          type: undefined,
-          name: 'Year 2016',
-          data: [1216, 1001, 4436, 738, 40],
-        },
-      ],
+          data: [5, 7, 3]
+        }]
     });
   }
 
