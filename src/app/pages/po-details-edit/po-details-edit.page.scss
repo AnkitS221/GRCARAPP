@@ -1,12 +1,21 @@
 ion-grid {
-    --ion-grid-padding: 3vw
+  --ion-grid-padding: 3vw;
 }
 
 ion-card {
   padding: 0px !important;
 }
 
-.card-po {
-  --background: #c5cfd4 !important
+.card-poL {
+  padding: 0px !important;
+  border-left-color: var(--ion-color-secondary);
+  border-left-width: 4px !important;
+  border-left-style: solid;
 }
 
+.card-poR {
+  padding: 0px !important;
+  border-left-color: var(--ion-color-tertiary);
+  border-left-width: 4px !important;
+  border-left-style: solid;
+}

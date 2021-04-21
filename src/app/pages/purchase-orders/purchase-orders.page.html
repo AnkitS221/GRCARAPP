@@ -18,7 +18,7 @@
   <ion-card *ngFor="let x of arr" (click)="goToEdit(x.purchase_type)" lines="none" class="ion-padding">
     <ion-item>
       <h5><b>{{x.purchase_id}}</b></h5>
-      <ion-button *ngIf="x.purchase_type=='LN'" fill="outline" slot="end" color="warning">{{x.purchase_type_desc}}</ion-button>
+      <ion-button *ngIf="x.purchase_type=='LN'" fill="outline" slot="end" color="secondary">{{x.purchase_type_desc}}</ion-button>
       <ion-button *ngIf="x.purchase_type=='TR'" fill="outline" slot="end" color="tertiary">{{x.purchase_type_desc}}</ion-button>
     </ion-item>
     <ion-card-content>
